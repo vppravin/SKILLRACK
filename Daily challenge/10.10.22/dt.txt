@@ -1,0 +1,29 @@
+//dt 10/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+int n=ss.nextInt();
+String bin=Integer.toBinaryString(n);
+int bina=Integer.parseInt(bin);
+int rev=0,rem;
+while(bina>0){
+    rem=bina%10;
+    rev=rev*10+rem;
+    bina/=10;
+}
+rem=0;
+int dec=0,i=0;
+while(rev>0){
+    rem=rev%10;
+    dec+=rem*Math.pow(2,i);
+    rev/=10;
+    i++;
+}
+        System.out.println(dec);
+    }
+}
+
+
+

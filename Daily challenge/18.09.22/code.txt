@@ -1,0 +1,25 @@
+//dc->18/9/22
+package rocky;
+import java.util.*;
+    public class jj {
+        public static void main(String[] args) {
+            Scanner ss = new Scanner(System.in);
+           int r=ss.nextInt();
+            int c=ss.nextInt();
+            int[][] ar=new int[r][c];
+            int sum=0;
+            for(int i=0;i<r;i++){
+                for(int j=0;j<c;j++){
+                    ar[i][j]=ss.nextInt();
+                }
+            }
+            int r_limit=(r%2==0)?r/2:(r/2)+1;
+            int c_limit=(c%2==0)?c/2:(c/2)+1;
+            for(int i=0;i<r_limit;i++){
+                for(int j=0;j<c_limit;j++){
+                    sum+=ar[i][j];
+                }
+            }
+            System.out.println(sum);
+        }
+    }

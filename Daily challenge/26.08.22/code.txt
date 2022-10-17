@@ -1,0 +1,46 @@
+//c
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+   int n;
+   scanf("%d",&n);
+   int arr[n][n];
+   for(int i=0;i<n;i++){
+       for(int j=0;j<n;j++){
+           scanf("%d ",&arr[i][j]);
+       }
+   }
+   for(int i=0;i<n;i++){
+       for(int j=n-1;j>=0;j--){
+           printf("%d ",arr[j][i]);
+       }
+       printf("\n");
+   }
+
+    return 0;
+}
+
+//java
+package rocky;
+import java.util.Scanner;
+public class jj {
+    public static void main(String args[]){
+        Scanner my =new Scanner(System.in);
+       int n=my.nextInt();
+       int[][] arr=new int[n][n];
+       for(int i=0;i<n;i++){
+           for(int j=0;j<n;j++){
+               arr[i][j]=my.nextInt();
+           }
+       }
+       for(int i=0;i<n;i++){
+           for(int j=n-1;j>=0;j--){
+               System.out.print(arr[j][i]+" ");
+           }
+           System.out.println();
+       }
+
+
+    }
+}

@@ -1,0 +1,24 @@
+//dc 10/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+Scanner ss=new Scanner(System.in);
+int n=ss.nextInt();
+int x=ss.nextInt();
+        int flag = 0;
+for(int i=1;i<=n;i++) {
+    int temp = i;
+    while (temp > 0) {
+        if (temp % 10 == x) {
+            System.out.print(i + " ");
+            flag = 1;
+            break;
+        }
+        temp /= 10;
+    }
+}
+    if(flag==0) System.out.print("-1");
+
+    }
+}

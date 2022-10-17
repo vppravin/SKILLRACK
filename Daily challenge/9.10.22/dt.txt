@@ -1,0 +1,92 @@
+//dt 9/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static int[] alphaCount = new int[128];
+
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        char[] str1 = new char[101];
+        char[] str2 = new char[101];
+        str1 = ss.next().toCharArray();
+        str2 = ss.next().toCharArray();
+        int len1, len2;
+        len1 = str1.length;
+        len2 = str2.length;
+        int index = 0;
+        while (true) {
+            if (index < len1) {
+                alphaCount[str1[index]]++;
+                index++;
+            } else {
+                index = 0;
+                break;
+            }
+        }
+        while (true) {
+            if (index < len2) {
+                alphaCount[str2[index]]++;
+                index++;
+            } else {
+                printAlphabet(str1, len1);
+                printAlphabet(str2, len2);
+                break;
+            }
+        }
+    }
+
+    static void printAlphabet(char[] str, int len) {
+        int index = 0;
+            while (true) {
+                if (index < len) {
+                    if (alphaCount[str[index]] == 1) {
+                        System.out.print(str[index]);
+                    }
+                    index++;
+                }
+                else break;
+            }
+            }
+
+        }
+
+//or
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static int[] alphaCount = new int[128];
+
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+       char[] s1=new char[101];
+       char[] s2=new char[101];
+       s1=ss.next().toCharArray();
+       s2=ss.next().toCharArray();
+       int index=0;
+       int len1=s1.length;
+       int len2=s2.length;
+       while(index<len1){
+           alphaCount[s1[index]]++;
+           index++;
+       }
+       index=0;
+        while(index<len2){
+            alphaCount[s2[index]]++;
+            index++;
+        }
+        key(s1,len1);
+        key(s2,len2);
+
+            }
+            static void key(char[] s,int len){
+        int index=0;
+        while(index<len){
+            if(alphaCount[s[index]]==1) System.out.print(s[index]);
+            index++;
+        }
+    }
+
+}
+
+
+

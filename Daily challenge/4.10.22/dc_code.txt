@@ -1,0 +1,54 @@
+//dc- 4/10
+package thalapathy;
+import java.util.*;
+public class sandhanam{
+    public static void main(String[] args) {
+    Scanner ss=new Scanner(System.in);
+    int n=ss.nextInt();
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++){
+        arr[i]=ss.nextInt();
+    }
+    for(int i=0;i<n;i++){
+        int left_odd_count=0;
+        int right_odd_count=0;
+        for(int j=0;j<i;j++){
+            if(arr[j]%2!=0){
+                left_odd_count++;
+            }
+        }
+        for(int j=i+1;j<arr.length;j++){
+            if(arr[j]%2!=0){
+                right_odd_count++;
+            }
+        }
+        if(left_odd_count==right_odd_count) System.out.print(arr[i]+" ");
+        else System.out.print("-1"+" ");
+    }
+    }}
+
+//or 
+
+//dc- 4/10
+package thalapathy;
+import java.util.*;
+public class sandhanam{
+    public static void main(String[] args) {
+    Scanner ss=new Scanner(System.in);
+    int n=ss.nextInt();
+    int[] arr=new int[n];
+    int left_count=0,right_count=0;
+    int i;
+    for(i=0;i<n;i++) {
+        arr[i] = ss.nextInt();
+        if (arr[i] % 2 != 0 && i!=0) right_count++;
+    }
+    for(i=0;i<n-1;i++){
+        if(left_count==right_count) System.out.print(arr[i]+" ");
+        else System.out.print("-1"+" ");
+        if(arr[i]%2!=0) left_count++;
+        if(arr[i+1]%2!=0) right_count--;
+    }
+    if(left_count==right_count) System.out.print(arr[i]);
+    else System.out.print("-1");
+    }}

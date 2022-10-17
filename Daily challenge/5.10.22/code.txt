@@ -1,0 +1,49 @@
+//dc- 5/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+Scanner ss=new Scanner(System.in);
+long n=ss.nextInt();
+long k=n+1;
+while(true){
+    int flag=0;
+    for(int i=2;i<k/2;i++){
+        if(k%i==0){
+           flag=1;
+            break;
+        }
+    }
+    if(flag==0) {
+        System.out.print(k);
+        break;
+    }
+    k++;
+}}}
+
+//or
+
+//dc- 5/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+Scanner ss=new Scanner(System.in);
+long n=ss.nextInt();
+long k=n+1;
+while(true){
+    int flag=0;
+    int l=(int) Math.sqrt(k);
+    for(int i=2;i<=l;i++){
+        if(k%i==0){
+           flag=1;
+            break;
+        }
+    }
+    if(flag==0) {
+        System.out.print(k);
+        break;
+    }
+    k++;
+
+}}}

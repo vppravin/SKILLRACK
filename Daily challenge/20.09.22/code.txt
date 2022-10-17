@@ -1,0 +1,21 @@
+//dc->20/9/22
+package rocky;
+import java.util.*;
+    public class jj {
+        public static void main(String[] args) {
+            Scanner ss = new Scanner(System.in);
+            int x=ss.nextInt();
+            int y=ss.nextInt();
+            for(int i=x;i<=y;i++){
+                int temp=i;
+                do{
+                    int rem=temp%10;
+                    temp/=10;
+                    if(rem!=temp%10){
+                        System.out.print(i+" ");
+                        break;
+                    }
+                }while(temp>9);
+            }
+        }
+    }

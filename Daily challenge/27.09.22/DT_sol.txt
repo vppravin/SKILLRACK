@@ -1,0 +1,31 @@
+package thalapathy;
+import java.util.*;
+public class vijay {
+    public static void main(String[] args) {
+      Scanner ss=new Scanner(System.in);
+     String[] s=ss.nextLine().split(" ");
+     int count=0;
+     for(int i=0;i<s.length;i++){
+         for(int j=0;j<s.length-1;j++){
+             String temp=s[j].concat(s[j+1]);
+             String temp_rev=rev(temp);
+             if(temp.equals(temp_rev)){
+                 count++;
+             }
+             String temp1=s[j];
+             s[j]=s[j+1];
+             s[j+1]=temp1;
+
+         }
+     }
+        System.out.println(count);
+    }
+    static String rev(String re){
+        String b="";
+        char[] c=re.toCharArray();
+        for(int i=c.length-1;i>=0;i--){
+            b+=c[i];
+        }
+        return b;
+    }
+}

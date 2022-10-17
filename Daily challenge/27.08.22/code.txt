@@ -1,0 +1,40 @@
+//consonant rotated string
+package rocky;
+import java.util.*;
+    public class jj {
+        public static void main(String[] args) {
+            Scanner ss = new Scanner(System.in);
+            String s = ss.next();
+            int r=ss.nextInt();
+            char[] c=s.toCharArray();
+            int len=c.length;
+            char[] d=new char[len];
+            int j=0;
+            for(int i=0;i<len;i++){
+                if(notvowel(c[i])){
+                    d[j]=c[i];
+                    j++;
+                }
+            }
+            for(int i=0;i<r;i++){
+                char temp=d[0];
+                int k;
+                for(k=0;k<j-1;k++){
+                    d[k]=d[k+1];
+                }
+                d[k]=temp;
+            }
+            int p=0;
+            for(int i=0;i<len;i++){
+                if(notvowel(c[i])){
+                    c[i]=d[p];
+                    p++;
+                }
+                System.out.print(c[i]+"");
+            }
+        }
+        static boolean notvowel(char c){
+            c=Character.toLowerCase(c);
+            return c!='a' && c!='e' && c!='i' && c!='o' && c!='u';
+        }
+    }

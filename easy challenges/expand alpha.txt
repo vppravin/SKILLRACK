@@ -1,0 +1,53 @@
+//expand alpha--> i/p: a11b3
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        String s = ss.next();
+        int limit=0;
+        char temp;
+        int i,j;
+        char[] c=s.toCharArray();
+        for(i=0;i<c.length;i++){
+            if(c[i]>='0' && c[i]<='9'){
+                temp=c[i-1];
+                while(i!=c.length && c[i] >= '0' && c[i] <= '9'){
+                    limit=(limit*10)+Integer.parseInt(c[i]+"");
+                    i++;
+                }
+                for(j=0;j<limit;j++){
+                    System.out.print(temp);
+                }
+            }
+            limit=0;
+        }
+    }
+}
+
+//expand alpha--> i/p: 12a3b
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        String s = ss.next();
+        int limit=0;
+        char temp;
+        int i,j;
+        char[] c=s.toCharArray();
+        for(i=0;i<c.length;i++){
+            if(c[i]>='0' && c[i]<='9'){
+                //temp=c[i-1];
+                while(i!=c.length && c[i] >= '0' && c[i] <= '9'){
+                    limit=(limit*10)+Integer.parseInt(c[i]+"");
+                    i++;
+                }
+                for(j=0;j<limit;j++){
+                    System.out.print(c[i]);
+                }
+            }
+            limit=0;
+        }
+    }
+}

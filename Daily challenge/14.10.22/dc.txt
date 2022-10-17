@@ -1,0 +1,24 @@
+//dc 14/10
+package thalapathy;
+import java.util.*;
+public class sandhanam {
+    public static void main(String[] args) {
+      Scanner ss=new Scanner(System.in);
+     int m=ss.nextInt();
+     int n=ss.nextInt();
+     while(m!=n){
+         if(m<n){
+             System.out.print(m);
+             m++;
+         }
+         else{
+             System.out.print(n);
+             n++;
+         }
+     }
+        System.out.print(m);
+    }
+}
+
+
+

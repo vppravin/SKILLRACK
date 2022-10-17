@@ -1,0 +1,14 @@
+//DC 23/9/22
+package rocky;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        double[] a = new double[10];
+        for (int i = 0; i < 3; i++) {
+            a[i] = ss.nextDouble();
+        }
+        Double div = (2 * a[0] * a[1]) / a[2];
+        System.out.printf("%.3f", Math.sqrt(div));
+    }
+    }

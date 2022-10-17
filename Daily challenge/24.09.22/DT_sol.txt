@@ -1,0 +1,44 @@
+package thalapathy;
+import java.util.*;
+public class vijay {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        String s = ss.next();
+        char[] c = s.toCharArray();
+        String a = "";
+        Arrays.sort(c);
+        char[] temp=c;
+        for (int i = 0; i < c.length; i++) {
+            int count = 1;
+            while (i < c.length - 1 && c[i] == c[i + 1]) {
+                count++;
+                i++;
+            }
+            if (count % 2 != 0) {
+                a += c[i];
+            }
+        }
+        for (int i = temp.length-1; i>=0; i--) {
+            int count = 1;
+            while (i > 0 && temp[i] == temp[i -1]) {
+                count++;
+                i--;
+            }
+            if (count % 2 == 0) {
+                a += temp[i];
+            }
+        }
+        System.out.println(a);
+    }
+}
+//sorting the array
+/* for(int i=0;i<c.length-1;i++) {
+                for (int j = 0; j< c.length - 1; j++) {
+                    if (c[j] > c[j + 1]) {
+                        temp = c[j];
+                        c[j] = c[j + 1];
+                        c[j+1] = temp;
+                    }
+                }
+            }*/
+
